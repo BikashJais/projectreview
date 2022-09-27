@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>comments</title>
+</head>
+<body>
+   <div class="table-users">
+   <div class="header">Reviews</div>
+
+   <table cellspacing="0">
+      <tr>
+         <th>Product</th>
+         <th>description</th>
+         <th>Product Rating</th>
+         <th>Price</th>
+         <th width="170">Percenatge off</th>
+         <th>reviews</th>
+      </tr>
+         {% for review in reviews %}
+      <tr>
+          <td>{{review['Product']}}</td>
+         <td>{{review['prod_description']}}</td>
+         <td>{{review['product_Rating']}}</td>
+         <td>{{review['product_price']}}</td>
+         <td>{{review['perc_off']}} </td>
+         <td>{{review['comments']}}</td>
+       {% endfor %}
+   </table>
+</div>
+</body>
+</html>
