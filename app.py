@@ -60,7 +60,7 @@ def index():
                     prodRes = requests.get(productLink)
                     prodRes.encoding = 'utf-8'
                     prod_html = bs(prodRes.text, "html.parser")
-                    commentboxess = prod_html.find_all('div', {'class': "_16PBlm"})
+                    commentboxes = prod_html.find_all('div', {'class': "_16PBlm"})
                     comtag = commentboxes[0].div.div.find_all('div', {'class': ''})
                     custComment = comtag[0].div.text
                 except Exception as e:
